@@ -1,3 +1,3 @@
-module example.com/m
+module ShazamAlgorithm
 
 go 1.25.5
