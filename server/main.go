@@ -1,18 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"os"
 )
 
 func main() {
-	dir := "./audios"
-	files, err := os.ReadDir(dir)
+	audioFilesPath := "./audios"
+	os.Mkdir("processedAudios", 0755)
+	files, err := os.ReadDir(audioFilesPath)
 	if err != nil {
-		log.Fatal(err)
+		panic("Something went wrong")
 	}
 	for _, file := range files {
-		fmt.Print(file)
+
 	}
 }
